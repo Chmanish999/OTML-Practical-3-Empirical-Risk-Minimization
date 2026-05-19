@@ -1,72 +1,34 @@
 # OTML Practical 3: Empirical Risk Minimization (ERM)
 
-Objective:
-To understand Empirical Risk Minimization (ERM) using a Music Recommendation System and learn how machine learning models minimize prediction error during training.
+## 1. Aim
 
--
+The aim of this practical is to understand the concept of Empirical Risk Minimization (ERM) and implement it using a simple Music Genre Recommendation System.
 
-. Concepts Covered
-- Empirical Risk Minimization (ERM)
-- Prediction Error
-- Training Accuracy
-- Risk Calculation
-- Decision Tree Learning
-- Optimization in Machine Learning
+In this practical, students train a supervised machine learning model and calculate how prediction performance is related to empirical risk. The practical helps students understand that machine learning models try to minimize prediction error on training or testing data.
 
--
+---
 
-. OTML Concepts Mapped
-- Empirical Risk Minimization
-- Optimization
-- Error Measurement
-- Learning
-- Prediction
-- Model Fitting
+## 2. Course and Module Mapping
 
--
+**Course:** A8751 – Optimization Techniques in Machine Learning  
+**Module:** Module 1 – Model Fitting and Error Measurement  
+**Practical Topic:** Empirical Risk Minimization using a Music Genre Recommendation System
 
-. Theoretical Background 
+This practical is mapped with Module 1 of OTML, where students study model fitting, error measurement, empirical risk, prediction accuracy, and optimization-based learning.
 
-Empirical Risk Minimization (ERM) is one of the most important concepts in Machine Learning.
+---
 
-The goal of ERM is:
+## 3. Theory Background
 
-Minimize prediction error on training data.
+Empirical Risk Minimization, commonly called ERM, is one of the most important principles in machine learning.
 
-Machine learning models learn patterns from data and try to reduce incorrect predictions.
+In machine learning, **risk** means prediction error or loss. The true risk is the expected error of a model on the complete real-world data distribution. However, in practice, we do not have access to the complete data distribution. We only have a finite training dataset.
 
-Relationship:
+Therefore, we calculate error on the available dataset. This is called **empirical risk**.
 
-Risk = 1 − Accuracy
+Empirical risk means the average loss calculated over the available training examples.
 
-Lower empirical risk indicates better learning performance.
+In simple terms:
 
--
-
-. Technologies Used
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-
--
-
-. Dataset = music1.csv
-
-The dataset contains:
-- Age
-- Gender
-- Music Genre
-
--
-
-. Files Included
-
-OTML-Practical-3-ERM/
-│
-├── OTML_Practical_3.ipynb
-├── music1.csv
-├── requirements.txt
-└── README.md
+```text
+Empirical Risk = Average prediction error on available data
